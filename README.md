@@ -6,6 +6,7 @@ A Firefox browser extension to help penetration testers track and manage web app
 
 * ✅ Display categorized PT (Penetration Testing) checklist items
 * 📝 Each item includes a description with testing instructions
+* 🔍 Small built-in search bar to filter checklist items by keyword
 * 📌 Supports saving progress using browser local storage
 * 🧠 Designed for usability and clarity
 * 🔒 No external API calls or data collection
