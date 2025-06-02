@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+  "name": "PT Checklist Viewer",
+  "version": "1.0",
+  "description": "View and manage your PT security checklists.",
+  "permissions": [
+    "storage"
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  }
+}

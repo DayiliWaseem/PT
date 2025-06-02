@@ -1,0 +1,31 @@
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 10px;
+  width: 300px;
+}
+h1 {
+  font-size: 18px;
+}
+.category {
+  margin-top: 10px;
+}
+.category h2 {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.checklist-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2px;
+}
+.checklist-item input {
+  margin-right: 8px;
+}
+.description {
+  font-size: 12px;
+  margin-left: 24px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #444;
+}

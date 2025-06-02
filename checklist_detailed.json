@@ -1,0 +1,156 @@
+{
+  "categories": {
+    "Authentication": [
+      {
+        "name": "Testing for Credentials Transported over an Encrypted Channel",
+        "description": "Check referrer whether it's HTTP or HTTPS. Sending data through HTTP and HTTPS."
+      },
+      {
+        "name": "Testing for default credentials",
+        "description": "Testing for default credentials of common applications, testing for default password of new accounts."
+      },
+      {
+        "name": "Testing for Weak lock out mechanism",
+        "description": "Evaluate the account lockout mechanism’s ability to mitigate brute force password guessing. Evaluate the unlock mechanism’s resistance to unauthorized account unlocking."
+      },
+      {
+        "name": "Testing for bypassing authentication schema",
+        "description": "Force browsing (/admin/main.php, /page.asp?authenticated=yes), Parameter Modification, Session ID prediction, SQL Injection"
+      },
+      {
+        "name": "Test remember password functionality",
+        "description": "Look for passwords being stored in a cookie. Examine the cookies stored by the application. Verify that the credentials are not stored in clear text, but are hashed. Autocompleted=off?"
+      },
+      {
+        "name": "Testing for Browser cache weakness",
+        "description": "Check browser history issue by clicking 'Back' button after logging out. Check browser cache issue from HTTP response headers (Cache-Control: no-cache)"
+      },
+      {
+        "name": "Testing for Weak password policy",
+        "description": "Determine the resistance of the application against brute force password guessing using available password dictionaries by evaluating the length, complexity, reuse and aging requirements of passwords."
+      },
+      {
+        "name": "Testing for Weak security question/answer",
+        "description": "Testing for weak pre-generated questions, testing for weak self-generated question, testing for brute-forcible answers (Unlimited attempts?)"
+      },
+      {
+        "name": "Testing for weak password change or reset functionalities",
+        "description": "Test password reset (Display old password in plain-text?, Send via email?, Random token on confirmation email?), Test password change (Need old password?), CSRF vulnerability?"
+      },
+      {
+        "name": "Testing for Weaker authentication in alternative channel",
+        "description": "Understand the primary mechanism and identify other channels (Mobile App, Call center, SSO)"
+      }
+    ],
+    "Authorization": [
+      {
+        "name": "Testing Directory traversal/file include",
+        "description": "dot-dot-slash attack (../), Directory traversal, Local File inclusion/Remote File Inclusion."
+      },
+      {
+        "name": "Testing for bypassing authorization schema",
+        "description": "Access a resource without authentication?, Bypass ACL, Force browsing (/admin/adduser.jsp)"
+      },
+      {
+        "name": "Testing for Privilege Escalation",
+        "description": "Testing for role/privilege manipulate the values of hidden variables. Change some param groupid=2 to groupid=1"
+      },
+      {
+        "name": "Testing for Insecure Direct Object References",
+        "description": "Force changing parameter value (?param=123 -> ?param=456)"
+      }
+    ],
+    "Session Management": [
+      {
+        "name": "Testing for Bypassing Session Management Schema",
+        "description": "SessionID analysis prediction, unencrypted cookie transport, brute-force."
+      },
+      {
+        "name": "Testing for Cookies attributes",
+        "description": "Check HTTPOnly and Secure flag, expiration, inspect for sensitive data."
+      },
+      {
+        "name": "Testing for Session Fixation",
+        "description": "The application doesn't renew the cookie after a successfully user authentication."
+      },
+      {
+        "name": "Testing for Exposed Session Variables",
+        "description": "Encryption & Reuse of session Tokens vulnerabilities, Send sessionID with GET method?"
+      },
+      {
+        "name": "Testing for Cross Site Request Forgery",
+        "description": "URL analysis, Direct access to functions without any token."
+      },
+      {
+        "name": "Testing for logout functionality",
+        "description": "Check reuse session after logout both server-side and SSO."
+      },
+      {
+        "name": "Test Session Timeout",
+        "description": "Check session timeout, after the timeout has passed, all session tokens should be destroyed or be unusable."
+      },
+      {
+        "name": "Testing for Session puzzling",
+        "description": "The application uses the same session variable for more than one purpose, which may lead to session manipulation."
+      }
+    ],
+    "Error Handling": [
+      {
+        "name": "Analysis of Error Codes",
+        "description": "Locate error codes generated from applications or web servers. Collect sensitive information from that errors (Web Server, Application Server, Database)."
+      },
+      {
+        "name": "Analysis of Stack Traces",
+        "description": "Trigger stack traces using invalid or malformed inputs and analyze them for sensitive information disclosures."
+      }
+    ],
+    "Client-side Testing": [
+      {
+        "name": "Testing for DOM based Cross Site Scripting",
+        "description": "Test for user input reflected directly into DOM without sanitization."
+      },
+      {
+        "name": "Testing for JavaScript Execution",
+        "description": "Inject JavaScript code like: www.victim.com/?javascript:alert(1)"
+      },
+      {
+        "name": "Testing for HTML Injection",
+        "description": "Send malicious HTML code: ?user=<img src='aaa' onerror=alert(1)>"
+      },
+      {
+        "name": "Testing for Client Side URL Redirect",
+        "description": "Modify untrusted URL input to redirect users to a malicious site."
+      }
+    ],
+    "Technical Tests": [
+      {
+        "name": "Recon Phase",
+        "description": "Identify technologies, services, subdomains, endpoints, JS analysis, Google dorking, etc."
+      },
+      {
+        "name": "Session Management Testing",
+        "description": "Includes session cookie analysis, replay, fixation, concurrent login, cookie scope, and security flags."
+      },
+      {
+        "name": "Authentication Testing",
+        "description": "Test for enumeration, SQL injection, password policies, lockout mechanisms, rate limiting bypass, etc."
+      },
+      {
+        "name": "Forgot Password Testing",
+        "description": "Test reset token behavior, session invalidation, reset flows, and CSRF on reset endpoints."
+      },
+      {
+        "name": "Open Redirection Testing",
+        "description": "Test for redirection via parameters like ?url= and attempt to redirect to external malicious domains."
+      },
+      {
+        "name": "Cross-Site Scripting Testing",
+        "description": "Try multiple payloads, filters evasion, file uploads, and encodings to find XSS vulnerabilities."
+      },
+      {
+        "name": "SRF Testing",
+        "description": "Check CSRF token presence, binding to session, referer checks, and test form behavior."
+      }
+    ]
+  }
+}
